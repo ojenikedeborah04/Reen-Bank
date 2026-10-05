@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Account created | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <main
+      class="flex min-h-screen items-center justify-center bg-[#d8f3e9] p-5"
+    >
+      <section
+        class="relative w-full max-w-170 rounded-[30px] bg-white p-8 shadow-[0_0_90px_35px_#30b38b50] sm:p-16"
+      >
+        <a
+          href="./dashboard.html"
+          class="absolute right-6 top-5 text-xl text-neutral-400"
+          aria-label="Close"
+          >×</a
+        >
+        <h2 class="mb-10 text-3xl font-semibold text-[#30b38b]"></h2>
+        <div class="py-12">
+          <div class="mb-12 text-center text-6xl text-[#30b38b]">✓</div>
+          <h1 class="mb-14 text-center text-2xl font-semibold">
+            Your account has been created Successfully!
+          </h1>
+          <a
+            href="./dashboard.html"
+            class="inline-flex items-center justify-center rounded-lg bg-[#30b38b] px-7 py-3 font-semibold text-white hover:bg-[#269775] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#30b38b] transition w-full"
+            >Go to Dashboard</a
+          >
+        </div>
+        <p id="message" role="status" class="mt-4 text-sm text-[#b73d52]"></p>
+        
+      </section>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./account-created.js"></script>
+  </body>
+</html>

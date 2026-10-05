@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Withdraw | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <main
+      class="flex min-h-screen items-center justify-center bg-[#d8f3e9] p-5"
+    >
+      <section
+        class="relative w-full max-w-170 rounded-[30px] bg-white p-8 shadow-[0_0_90px_35px_#30b38b50] sm:p-16"
+      >
+        <a
+          href="./dashboard.html"
+          class="absolute right-6 top-5 text-xl text-neutral-400"
+          aria-label="Close"
+          >×</a
+        >
+        <h2 class="mb-10 text-3xl font-semibold text-[#30b38b]">Withdraw</h2>
+        <form id="withdraw-form">
+          <label class="mb-5 block text-sm font-semibold" for="amount"
+            >Amount (₦)<input
+              class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+              id="amount"
+              name="amount"
+              type="number"
+              placeholder="100,000"
+              required
+              min="1"
+              step="0.01" /></label
+          ><label class="mb-5 block text-sm font-semibold" for="account-number"
+            >Account Number<input
+              class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+              id="account-number"
+              name="account-number"
+              type="text"
+              placeholder="00 00 00 00 00"
+              required
+              pattern="[0-9]{10}"
+              maxlength="10"
+              inputmode="numeric" /></label
+          ><label class="mb-5 block text-sm font-semibold" for="account-name"
+            >Account Name<input
+              class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+              id="account-name"
+              name="account-name"
+              type="text"
+              placeholder="Enter account name"
+              required /></label
+          ><label class="block text-sm font-semibold"
+            >Bank<select
+              id="bank"
+              required
+              class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20">
+              <option value="">Bank Name</option>
+              <option>Demo Bank</option>
+              <option>Access Bank</option>
+              <option>GTBank</option>
+              <option>Zenith Bank</option>
+              <option>First Bank</option>
+            </select></label
+          >
+          <div class="mt-10 flex gap-5">
+            <a
+              href="./accounts.html"
+              class="flex-1 rounded-lg bg-neutral-300 px-5 py-3 text-center font-semibold"
+              >Cancel</a
+            ><button
+              class="inline-flex items-center justify-center rounded-lg bg-[#30b38b] px-7 py-3 font-semibold text-white hover:bg-[#269775] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#30b38b] transition flex-1"
+            >
+              Withdraw
+            </button>
+          </div>
+        </form>
+        <p id="message" role="status" class="mt-4 text-sm text-[#b73d52]"></p>
+        
+      </section>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./withdraw.js"></script>
+  </body>
+</html>

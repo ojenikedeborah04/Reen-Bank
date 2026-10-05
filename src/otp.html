@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Email Verification | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <main
+      class="relative min-h-screen overflow-hidden bg-[#d8f3e9] px-6 py-12 lg:px-[6.25%] lg:py-24"
+    >
+      <img
+        src="./assets/images/background img.jpg"
+        alt="Background Image"
+        class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-multiply"/>
+      <div
+        class="relative mx-auto grid max-w-[1680px] items-center gap-16 lg:min-h-[75vh] lg:grid-cols-2"
+      >
+        <section class="flex h-full flex-col justify-between gap-16">
+          <a
+            href="./index.html"
+            class="inline-flex items-center gap-4 text-2xl font-bold whitespace-nowrap"
+            aria-label="Reen Bank home">
+            <img src="./assets/images/logo.png" alt="Reen Bank logo" class="object-contain" />
+            
+          </a>
+
+          <div>
+            <p class="mb-3 text-2xl text-[#30b38b]">Reen Bank</p>
+            <h1
+              class="text-4xl font-semibold leading-[1.35] tracking-tight xl:text-[60px]">
+              Experience<br />hassle-free banking
+            </h1>
+            <p class="mt-8 max-w-160 text-lg leading-relaxed text-neutral-600">
+              Experience simple, secure, and stress-free banking. Say goodbye to
+              long queues and complex procedures and hello to hassle-free
+              banking with Reen Bank.
+            </p>
+          </div>
+
+          <div class="flex gap-3 text-[#30b38b]" aria-label="Social media">
+            <img src="./assets/images/facebook 1.png" alt="Facebook" class="h-9 w-9 object-contain" />
+            <img src="./assets/images/instagram 1.png" alt="Instagram" class="h-9 w-9 object-contain" />
+            <img src="./assets/images/twitter 1.png" alt="Twitter" class="h-9 w-9 object-contain" />
+          </div>
+        </section>
+
+        <section
+          class="rounded-[28px] bg-white p-7 shadow-[0_0_70px_#30b38b25] sm:p-14">
+          <h2 class="mb-10 text-3xl font-semibold text-[#30b38b]">
+            Email Verification
+          </h2>
+          <p class="mb-6 text-sm text-neutral-400">
+          A 6-digit code has been sent to your email <span id="otp-email"></span>
+            <a href="./register.html" class="text-[#30b38b]">Change</a>
+          </p>
+          
+          <form id="otp-form">
+            <div class="flex justify-between gap-2">
+              <input
+                aria-label="Digit 1"
+                class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+                inputmode="numeric"
+                pattern="[0-9]"
+                maxlength="1"
+                required
+                autocomplete="off"
+              /><input
+                aria-label="Digit 2"
+                class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+                inputmode="numeric"
+                pattern="[0-9]"
+                maxlength="1"
+                required
+                autocomplete="off"
+              /><input
+                aria-label="Digit 3"
+                class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+                inputmode="numeric"
+                pattern="[0-9]"
+                maxlength="1"
+                required
+                autocomplete="off"
+              /><input
+                aria-label="Digit 4"
+                class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+                inputmode="numeric"
+                pattern="[0-9]"
+                maxlength="1"
+                required
+                autocomplete="off"
+              /><input
+                aria-label="Digit 5"
+                class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+                inputmode="numeric"
+                pattern="[0-9]"
+                maxlength="1"
+                required
+                autocomplete="off"
+              /><input
+                aria-label="Digit 6"
+                class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+                inputmode="numeric"
+                pattern="[0-9]"
+                maxlength="1"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <p id="timer" class="mt-5 text-sm text-[#30b38b]"></p>
+            <button
+              class="inline-flex items-center justify-center rounded-lg bg-[#30b38b] px-7 py-3 font-semibold text-white hover:bg-[#269775] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#30b38b] transition w-full mt-4"
+              type="submit"
+            >
+              Verify Email
+            </button>
+            <p
+              id="message"
+              role="status"
+              class="mt-4 text-sm text-[#b73d52]"
+            ></p>
+          </form>
+          <p class="mt-6 text-sm text-neutral-400">
+            Didn't receive the code?
+            <button id="resend" class="ml-2 font-semibold text-[#30b38b]">
+              Resend
+            </button>
+          </p>
+        </section>
+      </div>
+      
+    </main>
+    <script src="./script.js" defer></script>
+    <script src="./otp.js" defer></script>
+  </body>
+</html>

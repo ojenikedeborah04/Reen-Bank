@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Demo Terms & Privacy | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <main
+      class="flex min-h-screen items-center justify-center bg-[#d8f3e9] p-5"
+    >
+      <section
+        class="relative w-full max-w-170 rounded-[30px] bg-white p-8 shadow-[0_0_90px_35px_#30b38b50] sm:p-16"
+      >
+        <a
+          href="./dashboard.html"
+          class="absolute right-6 top-5 text-xl text-neutral-400"
+          aria-label="Close"
+          >×</a
+        >
+        <h2 class="mb-10 text-3xl font-semibold text-[#30b38b]">
+          Demo Terms & Privacy
+        </h2>
+        <p class="leading-relaxed text-neutral-600">
+          This is a frontend prototype based on the supplied Reen Bank designs.
+          It is not a bank, does not accept deposits, charges no fees, and sends
+          no email. Use fictional information only. Sample profile information,
+          balances, and transaction history are stored in sessionStorage in this
+          browser tab and cleared when you log out. Passwords and card details
+          are not saved. There is no real authentication or deposit insurance.
+        </p>
+        <a
+          href="./register.html"
+          class="mt-8 inline-block text-[#30b38b] underline"
+          >Back to registration</a
+        >
+        <p id="message" role="status" class="mt-4 text-sm text-[#b73d52]"></p>
+        
+      </section>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./terms.js"></script>
+  </body>
+</html>

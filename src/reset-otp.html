@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Enter OTP | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <main
+      class="flex min-h-screen items-center justify-center bg-[#d8f3e9] p-5">
+      <section
+        class="relative w-full max-w-170 rounded-[30px] bg-white p-8 shadow-[0_0_90px_35px_#30b38b50] sm:p-16"
+      >
+        <a
+          href="./dashboard.html"
+          class="absolute right-6 top-5 text-xl text-neutral-400"
+          aria-label="Close"
+          >×</a
+        >
+        <h2 class="mb-10 text-3xl font-semibold text-[#30b38b]">Enter Otp</h2>
+        <p class="mb-6 text-sm text-neutral-400">
+          A 6-digit code has been sent to <span id="otp-email"></span>
+          <a href="./reset-password.html" class="text-[#30b38b]">Change</a>
+        </p>
+        
+        <form id="otp-form">
+          <div class="flex justify-between gap-2">
+            <input
+              aria-label="Digit 1"
+              class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+              inputmode="numeric"
+              pattern="[0-9]"
+              maxlength="1"
+              required
+              autocomplete="off"
+            /><input
+              aria-label="Digit 2"
+              class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+              inputmode="numeric"
+              pattern="[0-9]"
+              maxlength="1"
+              required
+              autocomplete="off"
+            /><input
+              aria-label="Digit 3"
+              class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+              inputmode="numeric"
+              pattern="[0-9]"
+              maxlength="1"
+              required
+              autocomplete="off"
+            /><input
+              aria-label="Digit 4"
+              class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+              inputmode="numeric"
+              pattern="[0-9]"
+              maxlength="1"
+              required
+              autocomplete="off"
+            /><input
+              aria-label="Digit 5"
+              class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+              inputmode="numeric"
+              pattern="[0-9]"
+              maxlength="1"
+              required
+              autocomplete="off"
+            /><input
+              aria-label="Digit 6"
+              class="otp-digit h-14 w-10 rounded-xl border border-neutral-400 text-center text-xl focus:outline-[#30b38b] sm:w-14"
+              inputmode="numeric"
+              pattern="[0-9]"
+              maxlength="1"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <p id="timer" class="mt-5 text-sm text-[#30b38b]"></p>
+          <button
+            class="inline-flex items-center justify-center rounded-lg bg-[#30b38b] px-7 py-3 font-semibold text-white hover:bg-[#269775] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#30b38b] transition w-full mt-4"
+            type="submit"
+          >
+            Confirm
+          </button>
+          <p id="message" role="status" class="mt-4 text-sm text-[#b73d52]"></p>
+        </form>
+        <p class="mt-6 text-sm text-neutral-400">
+          Didn't receive the code?
+          <button id="resend" class="ml-2 font-semibold text-[#30b38b]">
+            Resend
+          </button>
+        </p>
+        
+      </section>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./reset-otp.js"></script>
+  </body>
+</html>

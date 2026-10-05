@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profile | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <div class="relative min-h-screen bg-[#f5fbf8]">
+      
+      <div class="relative flex min-h-screen flex-col lg:flex-row">
+        <aside
+          class="flex shrink-0 flex-col p-6 lg:fixed lg:inset-y-0 lg:w-67.5 lg:px-8 lg:py-12">
+          <a
+            href="./index.html"
+            class="inline-flex items-center gap-4 text-2xl font-bold whitespace-nowrap"
+            aria-label="Reen Bank home">
+            <span
+              class=" px-1.5 pb-1 leading-none"
+              ><img src="./assets/images/logo.png" alt="Reen Bank Logo">
+            </span>
+          </a>
+          <nav class="mt-7 flex flex-wrap gap-1 lg:mt-20 lg:flex-col">
+            <a
+              href="./dashboard.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/fi-rr-apps.png" alt="Overview Logo">Overview</a
+            ><a
+              href="./accounts.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/fi-rr-credit-card.png" alt="Accounts Logo">Accounts</a
+            ><a
+              href="./transactions.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/Group 19.png" alt="Transactions Logo">Transactions</a
+            ><a
+              href="./profile.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 font-semibold text-[#30b38b]"
+              ><img src="./assets/images/fi-sr-user.png" alt="Profile Logo">Profile</a
+            >
+          </nav>
+          <a href="./logout.html" class="mt-auto hidden items-center gap-8 p-3 pt-12 text-neutral-600 lg:flex">
+            <img src="./assets/images/fi-rr-arrow-left.png" alt="Logout">Logout
+          </a>
+        </aside>
+        <main class="min-w-0 flex-1 px-6 pb-12 lg:ml-67.5 lg:px-10">
+          <header
+            class="mb-14 flex flex-wrap items-center justify-between gap-6 py-8 lg:py-12">
+            <h1 class="text-3xl font-semibold">Profile</h1>
+            <div class="text-center">
+              <p data-user-name class="text-sm text-[#30b38b]">
+                Maureen Oguche
+              </p>
+              <p class="mt-1 text-2xl font-bold tracking-tight">1234567890</p>
+            </div>
+            <div class="flex items-center gap-5">
+              <label class="flex items-center gap-3 text-neutral-500"
+                ><img src="./assets/images/fi-rr-search.png" alt="Search">
+                <input
+                  id="search"
+                  aria-label="Search transactions"
+                  placeholder="Search"
+                  class="w-28 bg-transparent text-sm outline-none focus:border-b focus:border-[#30b38b]" /
+                >
+              </label>
+                <button
+                id="notifications"
+                aria-label="Notifications">
+                <img src="./assets/images/notification bell.png" alt="Notification Logo">
+                </button
+              ><a href="./profile.html"
+                ><img
+                  src="./assets/images/Ellipse 32.png"
+                  alt="Profile"
+                  class="size-11 rounded-full object-cover" /></a
+              ><a href="./logout.html" class="text-sm lg:hidden">Logout</a>
+            </div>
+          </header>
+          <div
+            id="notice"
+            role="status"
+            class="mb-4 text-sm text-[#30b38b]"
+          ></div>
+          <div class="grid grid-cols-1 gap-12 xl:grid-cols-[1.4fr_1fr]">
+            <section class="rounded-xl bg-white p-8 sm:px-16">
+              <img
+                src="./assets/images/Ellipse 32.png"
+                alt="Demo profile photo"
+                class="mx-auto size-32 rounded-full object-cover"
+              />
+              <h2
+                data-user-name
+                class="mt-6 text-center text-3xl font-semibold"
+              ></h2>
+              <p
+                class="mx-auto mt-4 w-fit rounded-md bg-[#e7d4fa] px-6 py-2 text-sm text-[#4c2879]">
+                Pro User
+              </p>
+              <form id="profile-form" class="mt-10">
+                <label class="mb-5 block text-sm font-semibold" for="email">Email
+                  <input
+                    class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required /
+                  >
+                </label>
+                <label class="mb-5 block text-sm font-semibold" for="phone">Phone Number
+                  <input
+                    class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+234 803 041 1314"
+                    required
+                    pattern="[+0-9 ()-]{7,20}" /
+                  >
+                </label>
+                <label class="block text-sm font-semibold text-[#30b38b]">Gender
+                  <select
+                    id="gender"
+                    class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20">
+                    <option value="">Prefer not to say</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other</option>
+                  </select>
+                </label
+                ><button
+                  class="inline-flex items-center justify-center rounded-lg bg-[#30b38b] px-7 py-3 font-semibold text-white hover:bg-[#269775] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#30b38b] transition w-full mt-4"
+                  type="submit">
+                  Save changes
+                </button>
+                <p
+                  id="message" role="status" class="mt-4 text-sm text-[#b73d52]">
+                </p>
+              </form>
+              <a
+                href="./reset-password.html"
+                class="inline-flex items-center justify-center rounded-lg bg-[#30b38b] px-7 py-3 font-semibold text-white hover:bg-[#269775] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#30b38b] transition mt-6 w-full"
+                >Reset Password</a
+              >
+            </section>
+            <div>
+              <div class="mb-12 rounded-xl bg-[#d3f2e7] p-8">
+                <p class="text-sm text-[#4c2879]">Main Account</p>
+                <p class="mt-3 text-3xl font-bold" data-money="balance"></p>
+              </div>
+              <section>
+                <div class="mb-6 flex items-center justify-between">
+                  <h2 class="text-xl font-semibold">Transactions</h2>
+                  <a
+                    href="./transactions.html"
+                    aria-label="View all transactions"
+                    ><img src="./assets/images/Vector.png" alt="Right Arrow"></a
+                  >
+                </div>
+                <div id="transaction-feed"></div>
+              </section>
+            </div>
+          </div>
+          
+        </main>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./profile.js"></script>
+  </body>
+</html>

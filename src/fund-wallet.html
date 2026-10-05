@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fund Wallet | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <main
+      class="flex min-h-screen items-center justify-center bg-[#d8f3e9] p-5"
+    >
+      <section
+        class="relative w-full max-w-170 rounded-[30px] bg-white p-8 shadow-[0_0_90px_35px_#30b38b50] sm:p-16"
+      >
+        <a
+          href="./dashboard.html"
+          class="absolute right-6 top-5 text-xl text-neutral-400"
+          aria-label="Close"
+          >×</a
+        >
+        <h2 class="mb-10 text-3xl font-semibold text-[#30b38b]">Fund Wallet</h2>
+        <form id="fund-form">
+          <fieldset class="mb-6">
+            <legend class="mb-3 text-sm">Select Payment Method</legend>
+            <div class="flex gap-4">
+              <label class="flex-1 rounded-lg border p-4"
+                ><input
+                  type="radio"
+                  name="method"
+                  value="Direct Pay"
+                  checked
+                  class="accent-[#30b38b]"
+                />
+                Direct Pay</label
+              ><label class="flex-1 rounded-lg border p-4"
+                ><input
+                  type="radio"
+                  name="method"
+                  value="Credit Card"
+                  class="accent-[#ed5064]"
+                />
+                Credit Card</label
+              >
+            </div>
+          </fieldset>
+          <label class="mb-5 block text-sm font-semibold" for="amount"
+            >Amount (₦)<input
+              class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+              id="amount"
+              name="amount"
+              type="number"
+              placeholder="100,000"
+              required
+              min="1"
+              max="10000000"
+              step="0.01"
+          /></label>
+          <div id="card-fields" class="hidden">
+            <label class="mb-5 block text-sm font-semibold" for="card-number"
+              >Card Number<input
+                class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+                id="card-number"
+                name="card-number"
+                type="text"
+                placeholder="4242 4242 4242 4242"
+                required
+                inputmode="numeric"
+                pattern="[0-9 ]{16,19}" /></label
+            ><label class="mb-5 block text-sm font-semibold" for="card-name"
+              >Card Holder Name<input
+                class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+                id="card-name"
+                name="card-name"
+                type="text"
+                placeholder="Enter card holder name"
+                required
+            /></label>
+            <div class="grid grid-cols-2 gap-5">
+              <label class="mb-5 block text-sm font-semibold" for="expiry"
+                >Expiry Date<input
+                  class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+                  id="expiry"
+                  name="expiry"
+                  type="text"
+                  placeholder="MM/YY"
+                  required
+                  pattern="(0[1-9]|1[0-2])/[0-9]{2}" /></label
+              ><label class="mb-5 block text-sm font-semibold" for="cvv"
+                >CVV<input
+                  class="mt-2 w-full rounded-xl border border-neutral-400 bg-white px-5 py-4 text-sm shadow-[0_8px_35px_#00000005] outline-none focus:border-[#30b38b] focus:ring-2 focus:ring-[#30b38b]/20 font-normal"
+                  id="cvv"
+                  name="cvv"
+                  type="password"
+                  placeholder="000"
+                  required
+                  pattern="[0-9]{3}"
+                  maxlength="3"
+              /></label>
+            </div>
+          </div>
+          <div class="mt-6 flex items-center gap-5">
+            <a
+              href="./accounts.html"
+              class="flex-1 rounded-lg bg-neutral-300 px-5 py-3 text-center font-semibold"
+              >Cancel</a
+            ><button
+              class="inline-flex items-center justify-center rounded-lg bg-[#30b38b] px-7 py-3 font-semibold text-white hover:bg-[#269775] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#30b38b] transition flex-1"
+            >
+              Fund
+            </button>
+          </div>
+        </form>
+        <p id="message" role="status" class="mt-4 text-sm text-[#b73d52]"></p>
+        
+      </section>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./fund-wallet.js"></script>
+  </body>
+</html>

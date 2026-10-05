@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Transactions | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <div class="relative min-h-screen bg-[#f5fbf8]">
+      
+      <div class="relative flex min-h-screen flex-col lg:flex-row">
+        <aside
+          class="flex shrink-0 flex-col p-6 lg:fixed lg:inset-y-0 lg:w-67.5 lg:px-8 lg:py-12">
+          <a
+            href="./index.html"
+            class="inline-flex items-center gap-4 text-2xl font-bold whitespace-nowrap"
+            aria-label="Reen Bank home">
+           <span
+              class=" px-1.5 pb-1 leading-none"
+              ><img src="./assets/images/logo.png" alt="Reen Bank Logo">
+            </span>
+          </a>
+          <nav class="mt-7 flex flex-wrap gap-1 lg:mt-20 lg:flex-col">
+            <a
+              href="./dashboard.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/fi-rr-apps.png" alt="Overview Logo">Overview</a
+            ><a
+              href="./accounts.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/fi-rr-credit-card.png" alt="Accounts Logo">Accounts</a
+            ><a
+              href="./transactions.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 font-semibold text-[#30b38b]"
+              ><img src="./assets/images/Group 20.png" alt="Transactions Logo">Transactions</a
+            ><a
+              href="./profile.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/fi-rr-user.png" alt="Profile Logo">Profile</a
+            >
+          </nav>
+          <a
+            href="./logout.html"
+            class="mt-auto hidden items-center gap-8 p-3 pt-12 text-neutral-600 lg:flex"
+            ><img src="./assets/images/fi-rr-arrow-left.png" alt="Logout">Logout</a
+          >
+        </aside>
+        <main class="min-w-0 flex-1 px-6 pb-12 lg:ml-67.5 lg:px-10">
+          <header
+            class="mb-14 flex flex-wrap items-center justify-between gap-6 py-8 lg:py-12"
+          >
+            <h1 class="text-3xl font-semibold">Transactions</h1>
+            <div class="text-center">
+              <p data-user-name class="text-sm text-[#30b38b]">
+                Maureen Oguche
+              </p>
+              <p class="mt-1 text-2xl font-bold tracking-tight">1234567890</p>
+            </div>
+            <div class="flex items-center gap-5">
+              <label class="flex items-center gap-3 text-neutral-500"
+                ><img src="./assets/images/fi-rr-search.png" alt="Search">
+                <input
+                  id="search"
+                  aria-label="Search transactions"
+                  placeholder="Search"
+                  class="w-28 bg-transparent text-sm outline-none focus:border-b focus:border-[#30b38b]" /
+                >
+              </label>
+              <button
+                id="notifications"
+                aria-label="Notifications">
+                <img src="./assets/images/notification bell.png" alt="Notification Logo">
+             </button
+              ><a href="./profile.html"
+                ><img
+                  src="./assets/images/Ellipse 32.png"
+                  alt="Profile"
+                  class="size-11 rounded-full object-cover" /></a
+              ><a href="./logout.html" class="text-sm lg:hidden">Logout</a>
+            </div>
+          </header>
+          <div
+            id="notice"
+            role="status"
+            class="mb-4 text-sm text-[#30b38b]"
+          ></div>
+          <div id="account-cards" class="grid gap-5 sm:grid-cols-3"></div>
+          <div class="mt-12 flex flex-wrap items-center justify-between gap-4">
+            <h2 class="text-xl font-semibold">Transaction history</h2>
+            <select
+              id="status-filter"
+              aria-label="Filter by status"
+              class="rounded-lg border border-neutral-200 bg-white p-3 text-sm"
+            >
+              <option>All statuses</option>
+              <option>Completed</option>
+              <option>Pending</option>
+              <option>Canceled</option>
+            </select>
+          </div>
+          <div class="mt-6 overflow-x-auto">
+            <table class="w-full min-w-175 text-left text-sm">
+              <thead class="text-neutral-500">
+                <tr>
+                  <th class="p-4">Type</th>
+                  <th>Name</th>
+                  <th>Method</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="transaction-table"></tbody>
+            </table>
+          </div>
+          
+        </main>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./transactions.js"></script>
+  </body>
+</html>

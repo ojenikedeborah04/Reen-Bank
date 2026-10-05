@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Overview | Reen Bank</title>
+    <link rel="stylesheet" href="./output.css">
+    
+  </head>
+  <body class="m-0 font-sans text-[#252725] antialiased">
+    <div class="relative min-h-screen bg-[#f5fbf8]">
+      
+      <div class="relative flex min-h-screen flex-col lg:flex-row">
+        <aside
+          class="flex shrink-0 flex-col p-6 lg:fixed lg:inset-y-0 lg:w-67.5 lg:px-8 lg:py-12">
+          <a
+            href="./index.html"
+            class="inline-flex items-center gap-4 text-2xl font-bold whitespace-nowrap"
+            aria-label="Reen Bank home">
+            <span
+              class=" px-1.5 pb-1 leading-none"
+              ><img src="./assets/images/logo.png" alt="Reen Bank Logo">
+            </span>
+          </a>
+          <nav class="mt-7 flex flex-wrap gap-1 lg:mt-20 lg:flex-col">
+            <a
+              href="./dashboard.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 font-semibold text-[#30b38b]"
+              ><img src="./assets/images/fi-sr-apps.png" alt="Overview Logo">Overview</a
+            ><a
+              href="./accounts.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/fi-rr-credit-card.png" alt="Accounts Logo">Accounts</a
+            ><a
+              href="./transactions.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/Group 19.png" alt="Transactions Logo">Transactions</a
+            ><a
+              href="./profile.html"
+              class="flex items-center gap-6 rounded-lg px-3 py-4 text-neutral-600 hover:bg-[#d3f2e7]"
+              ><img src="./assets/images/fi-rr-user.png" alt="Profile Logo">Profile</a
+            >
+          </nav>
+          <a
+            href="./logout.html"
+            class="mt-auto hidden items-center gap-8 p-3 pt-12 text-neutral-600 lg:flex"
+            ><img src="./assets/images/fi-rr-arrow-left.png" alt="Logout">Logout</a
+          >
+        </aside>
+        <main class="min-w-0 flex-1 px-6 pb-12 lg:ml-67.5 lg:px-10">
+          <header
+            class="mb-14 flex flex-wrap items-center justify-between gap-6 py-8 lg:py-12">
+            <h1 class="text-3xl font-semibold">Overview</h1>
+            <div class="text-center">
+              <p data-user-name class="text-sm text-[#30b38b]">
+                Maureen Oguche
+              </p>
+              <p class="mt-1 text-2xl font-bold tracking-tight">1234567890</p>
+            </div>
+            <div class="flex items-center gap-5">
+              <label class="flex items-center gap-3 text-neutral-500"
+                ><img src="./assets/images/fi-rr-search.png" alt="Search">
+                <input
+                  id="search"
+                  aria-label="Search transactions"
+                  placeholder="Search"
+                  class="w-28 bg-transparent text-sm outline-none focus:border-b focus:border-[#30b38b]" /></label
+              >
+              <button
+                id="notifications"
+                aria-label="Notifications"
+                class="text-2xl">
+                <img src="./assets/images/notification bell.png" alt="Notification Logo">
+              </button
+              ><a href="./profile.html"
+                ><img
+                  src="./assets/images/Ellipse 32.png"
+                  alt="Profile"
+                  class="size-11 rounded-full object-cover" /></a
+              ><a href="./logout.html" class="text-sm lg:hidden">Logout</a>
+            </div>
+          </header>
+          <div
+            id="notice"
+            role="status"
+            class="mb-4 text-sm text-[#30b38b]"
+          ></div>
+          <div class="grid grid-cols-1 gap-12 xl:grid-cols-[1.5fr_1fr]">
+            <div>
+              <div
+                class="mb-6 flex flex-wrap items-center justify-between gap-3">
+                <h2 class="text-xl font-semibold">Current Account Balance</h2>
+                <button
+                  id="toggle-balance"
+                  class="rounded-lg bg-neutral-100 p-3"
+                  aria-label="Toggle balance visibility">
+                 <img src="./assets/images/fi-rr-eye-crossed.png" alt="View Logo">
+               </button>
+                <select
+                  id="period"
+                  aria-label="Statistics period"
+                  class="rounded-lg bg-neutral-100 p-3 text-xs">
+                  <option>All time</option>
+                  <option>This month</option>
+                </select>
+              </div>
+              <section class="rounded-xl bg-[#d3f2e7] p-7">
+                <div class="flex flex-wrap items-center justify-between gap-6">
+                  <img src="./assets/images/image 32.png" alt="Rb">
+                  <div>
+                    <p class="mb-2 text-sm text-[#4c2879]">Current Balance</p>
+                    <p class="text-xl font-bold" data-money="balance"></p>
+                  </div>
+                  <div>
+                    <p class="mb-2 text-sm text-[#4c2879]">Income</p>
+                    <p class="text-xl font-bold" data-money="income"></p>
+                  </div>
+                  <div>
+                    <p class="mb-2 text-sm text-[#4c2879]">Expense</p>
+                    <p class="text-xl font-bold" data-money="expense"></p>
+                  </div>
+                </div>
+              </section>
+              <div class="mb-7 mt-12 flex items-center justify-between">
+                <h2 class="text-xl font-semibold">Accounts</h2>
+                <a
+                  href="./accounts.html"
+                  class="rounded-lg bg-neutral-100 px-3 py-1 text-2xl"
+                  aria-label="Manage accounts">
+                  <img src="./assets/images/fi-rr-plus-small.png" alt="Plus">
+               </a>
+              </div>
+              <div id="account-cards" class="grid gap-5 sm:grid-cols-3"></div>
+              <h2 class="mb-7 mt-12 text-xl font-semibold">Statistics</h2>
+              <div class="space-y-8">
+                <div class="flex items-center gap-5">
+                  <img src="./assets/images/image 32 (2).png" alt="Rb">
+                  <span class="w-20">Income</span>
+                  <progress
+                    id="income-bar"
+                    class="h-3 min-w-0 flex-1 accent-[#30b38b] [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-bar]:bg-neutral-100 [&::-webkit-progress-value]:rounded-full [&::-webkit-progress-value]:bg-[#30b38b] [&::-moz-progress-bar]:bg-[#30b38b]"
+                    max="100"
+                    value="85">
+                  </progress
+                  ><strong data-money="income"></strong>
+                </div>
+                <div class="flex items-center gap-5">
+                  <img src="./assets/images/image 34.png" alt="Rb">
+                  <span class="w-20">Expense</span>
+                 <progress
+                    id="expense-bar"
+                    class="h-3 min-w-0 flex-1 accent-[#ed5064] [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-bar]:bg-neutral-100 [&::-webkit-progress-value]:rounded-full [&::-webkit-progress-value]:bg-[#ed5064] [&::-moz-progress-bar]:bg-[#ed5064]"
+                    max="100"
+                    value="25">
+                  </progress
+                  ><strong data-money="expense"></strong>
+                </div>
+              </div>
+            </div>
+            <div>
+              <section>
+                <div class="mb-6 flex items-center justify-between">
+                  <h2 class="text-xl font-semibold">Transactions</h2>
+                  <a
+                    href="./transactions.html"
+                    aria-label="View all transactions"
+                    class="text-3xl text-[#30b38b]"
+                    ><img src="./assets/images/Vector.png" alt="Right Arrow"></a
+                  >
+                </div>
+                <div id="transaction-feed"></div>
+              </section>
+              <button
+                id="upgrade"
+                class="mt-10 w-full rounded-xl bg-[#30b38b] p-7 text-left text-white"
+                style="background-image: url(./assets/images/Rectangle\ 167.png)";>
+                <img src="./assets/images/Vector (1).png" alt="Right Arrow">
+                <h2 class="mt-10 text-3xl font-semibold">Upgrade to PRO</h2>
+                <p class="text-sm">Sign in on more than one device</p>
+              </button>
+            </div>
+          </div>
+          
+        </main>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./dashboard.js"></script>
+  </body>
+</html>
